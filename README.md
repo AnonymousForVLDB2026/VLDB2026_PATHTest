@@ -93,13 +93,13 @@ NebulaGraph
 And testing other databases is similar to tesing Neo4j.
 ## Bugs Found by PATHTest
 | Bug          | Link                                                       | Status    | Type  |
-|--------------|------------------------------------------------------------|-----------|-------|
+| ------------ | ---------------------------------------------------------- | --------- | ----- |
 | neo4j1       | https://github.com/neo4j/neo4j/issues/13624                | fixed     | error |
 | neo4j2       | https://github.com/neo4j/neo4j/issues/13629                | confirmed | error |
 | neo4j3       | https://github.com/neo4j/neo4j/issues/13631                | fixed     | error |
 | neo4j4       | https://github.com/neo4j/neo4j/issues/13643                | fixed     | logic |
 | neo4j5       | https://github.com/neo4j/neo4j/issues/13648                | fixed     | error |
-| neo4j6       | https://github.com/neo4j/neo4j/issues/13662                | confirmed | error |
+| neo4j6       | https://github.com/neo4j/neo4j/issues/13662                | fixed     | error |
 | memgraph1    | https://github.com/memgraph/memgraph/issues/2863           | confirmed | error |
 | memgraph2    | https://github.com/memgraph/memgraph/issues/2864           | confirmed | logic |
 | memgraph3    | https://github.com/memgraph/memgraph/issues/2865           | confirmed | logic |
