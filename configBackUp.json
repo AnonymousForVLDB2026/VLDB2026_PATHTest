@@ -1,0 +1,70 @@
+{
+  "neo4j@first":{
+    "port": 7688,
+    "host": "localhost",
+    "username": "neo4j",
+    "password": "neo4j_2025"
+  },
+  "neo4j@second":{
+    "port": 7689,
+    "host": "localhost",
+    "username": "neo4j",
+    "password": "neo4j_2025"
+  },
+  "memgraph@first": {
+  "port": 7692,
+  "host": "localhost",
+  "username": "memgraph",
+  "password": "memgraph_2025",
+  "restart-command": "docker run --network memgraph-network --restart always --name memgraph_2 -p 7692:7687 -p 7445:7444 -d 3c31e01c4e16 --query-execution-timeout-sec=1"
+  },
+  "memgraph@second": {
+    "port": 7693,
+    "host": "localhost",
+    "username": "memgraph",
+    "password": "memgraph_2025",
+    "restart-command": "docker run --network memgraph-network --restart always --name memgraph_3 -p 7693:7687 -p 7446:7444 -d 3c31e01c4e16 --query-execution-timeout-sec=1"
+  },
+  "janusgraph@first":{
+    "port": 8182,
+    "host": "localhost"
+  },
+  "janusgraph@second":{
+    "port": 8183,
+    "host": "localhost"
+  },
+  "agensgraph@first": {
+    "port": 5432,
+    "host": "localhost",
+    "password": "agens"
+  },
+  "agensgraph@second": {
+    "port": 5433,
+    "host": "localhost",
+    "password": "agens"
+  },
+  "nebula@first":{
+    "port": 9669,
+    "host": "localhost",
+    "username": "root",
+    "password": "nebula0"
+  },
+  "nebula@second":{
+    "port": 9669,
+    "host": "localhost",
+    "username": "root",
+    "password": "nebula1"
+  },
+  "tugraph@first":{
+    "port": 7689,
+    "host": "localhost",
+    "username": "admin",
+    "password": "tu_2025"
+  },
+  "tugraph@second":{
+    "port": 7690,
+    "host": "localhost",
+    "username": "admin",
+    "password": "tu_2025"
+  }
+}

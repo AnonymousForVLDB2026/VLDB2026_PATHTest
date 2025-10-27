@@ -1,0 +1,24 @@
+CREATE TAG IF NOT EXISTS L0(k0 string, k1 int, k2 string, k3 string, k4 int, k5 string, k6 string);
+CREATE TAG IF NOT EXISTS L1(k7 int, k8 string, k9 string, k10 bool, k11 bool, k12 int);
+CREATE TAG IF NOT EXISTS L2(k13 string, k14 string, k15 int, k16 int, k17 int);
+CREATE TAG IF NOT EXISTS L3(k18 bool, k19 bool, k20 string, k21 bool, k22 int, k23 int, k24 int);
+CREATE TAG IF NOT EXISTS L4(k25 int, k26 string, k27 bool, k28 bool, k29 bool, k30 string, k31 int);
+CREATE TAG IF NOT EXISTS L5(k32 int, k33 int, k34 string, k35 bool, k36 int);
+CREATE EDGE IF NOT EXISTS T0(k37 bool, k38 int, k39 int, k40 int, k41 bool, k42 int);
+CREATE EDGE IF NOT EXISTS T1(k43 string, k44 bool, k45 string, k46 bool, k47 int, k48 int);
+CREATE EDGE IF NOT EXISTS T2(k49 bool, k50 int, k51 int, k52 string, k53 int);
+CREATE EDGE IF NOT EXISTS T3(k54 bool, k55 bool, k56 int, k57 bool, k58 bool);
+CREATE EDGE IF NOT EXISTS T4(k59 bool, k60 int, k61 string, k62 int, k63 bool);
+CREATE TAG IF NOT EXISTS EMPTYTAG();
+CREATE EDGE IF NOT EXISTS EMPTYEDGE();
+
+INSERT VERTEX IF NOT EXISTS EMPTYTAG() VALUES"n":()
+INSERT VERTEX IF NOT EXISTS L4(k28, k27, k29, k31, k30, k26, k25) VALUES "n0":(false, false, true, 1552667654, "X8", "J", 2074547648);
+INSERT VERTEX IF NOT EXISTS L2(k16, k13, k15, k14), L1(k11, k10, k7, k8, k12, k9), L0(k0, k1, k2, k3, k4, k5, k6) VALUES "n1":(-1699592333, "q", 669231506, "R", false, false, 269083759, "8", -1401563478, "8", "P", 1102725909, "BP", "z", 1214378883, "fOA", "k");
+INSERT EDGE IF NOT EXISTS T2(k49, k51, k50, k53, k52) VALUES "n4"->"n7":(false, 475501523, 31645181, -1324421721, "H");
+INSERT EDGE IF NOT EXISTS T2(k49, k51, k53, k52) VALUES "n1"->"n6":(false, -635464839, -1324421721, "6");
+MATCH (n0 :L0)-[ *..2]->(n1 :L2 :L0 :L4) WHERE (true AND true) UNWIND [(n1.L0.k4), (n0.L0.k4)] AS a0 OPTIONAL MATCH (n0)-[r0 :T2]->(n1 :L4) WITH (n0.L0.k6) AS a1, r0, a0 WHERE ((r0.T2.k51) < 2139001973) RETURN (r0.T2.k53) AS a2;
+MATCH (n0 :L0)-[ *..2]->(n1 :L2 :L0 :L4) WHERE ( true AND true ) UNWIND [ ( n1 . L0 . k4 ) , ( n0 . L0 . k4 ) ] AS a0 WITH * OPTIONAL MATCH (n0)-[r0 :T2]->(n1 :L4) UNWIND [1] as l0 WITH ( n0 . L0 . k6 ) AS a1 , r0 , a0 WHERE ( ( r0 . T2 . k51 ) < 2139001973 ) RETURN CASE WHEN FALSE THEN NULL ELSE ( r0 . T2 . k53 ) END AS a2 ;
+MATCH (n0 :L5)<-[r0 :T3]-(n1 :L0)-[r1 :T3]->(n2 :L0 :L5) WHERE ((-1214538108 > -1) AND (-1435479116 <> 148483734)) UNWIND [(r1.T3.k56), (n2.L0.k1)] AS a0 UNWIND [(n2.L0.k4), -2039770657, -2039770657] AS a1 OPTIONAL MATCH (n5 :L0 :L5)<-[ *..2]-(n6 :L0 :L5) WITH n6, (r1.T3.k56) AS a2 WHERE ((n6.L0.k2) > (n6.L0.k0)) RETURN DISTINCT a2;
+MATCH (n0 :L5)<-[r0 :T3]-(n1 :L0)-[r1 :T3]->(n2 :L0 :L5) WHERE ( ( -1214538108 > -1 ) AND ( CASE WHEN TRUE THEN -1435479116 <> 148483734 END ) ) UNWIND [ CASE WHEN FALSE THEN NULL ELSE ( r1 . T3 . k56 ) END , ( n2 . L0 . k1 ) ] AS a0 UNWIND [ ( n2 . L0 . k4 ) , -2039770657 , CASE WHEN FALSE THEN NULL ELSE -2039770657 END ] AS a1 OPTIONAL MATCH (n5 :L0 :L5)<-[ *..2]-(n6 :L0 :L5) WITH * WITH n6 , ( r1 . T3 . k56 ) AS a2 WHERE ( ( n6 . L0 . k2 ) > ( n6 . L0 . k0 ) ) RETURN DISTINCT a2 ;
+INSERT VERTEX IF NOT EXISTS EMPTYTAG() VALUES"n":()
